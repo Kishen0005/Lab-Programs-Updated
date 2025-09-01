@@ -1,21 +1,13 @@
-package Employee;
-
+import Transport.*;
 public class Main {
-
 	public static void main(String[] args) {
-		Employee e1=new Employee("rahul",117,12000);
-		Employee e2=new Employee("rohit",111,13500);
-		System.out.println("initial employee details are");
-		e1.display();
-		e2.display();
-		e1.inc_salary(10);
-		e2.inc_salary(10);
-		System.out.println("updated employee details are");
-		e1.display();
-		e2.display();
-		
-		
-
+		Ebike e = new Ebike("EB-101", 50);
+		e.deliver("Burger ", "APJ BLOCK ");
+		Drone d = new Drone("DR-991");
+		d.deliver("pen", "ExamCell");
+		d.deliver("USB", "ISE Block");
+		double bill = d.cost(5);
+		System.out.println("Drone delivery cost: Rs." + bill);
 	}
-
 }
+
